@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: 'Julius',
   description: 'Plataforma de controle financeiro pessoal.',
   icons: {
-    icon: ['/favicon.ico'],
+    icon: ['/favicon.png'],
   },
 };
 

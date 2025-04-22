@@ -1,12 +1,10 @@
 import Image from 'next/image';
 
-import Logo from '@/app/image/logojuntabranca.png';
-
 export default function Header() {
   return (
     <section className="max-w-[1440px] m-auto">
-      <div className="flex justify-between pt-5 pl-14 pr-14 text-primary">
-        <Image src={Logo} alt="logo" width={100} height={0} />
+      <div className="flex items-center justify-between pt-5 pl-14 pr-14 text-primary">
+        <Image src={'/logojuntabranca.png'} alt="logo" width={100} height={0} />
 
         <nav>
           <ul className="flex justify-between gap-5">
@@ -17,9 +15,13 @@ export default function Header() {
           </ul>
         </nav>
 
-        <div className="flex gap-5">
-          <button>Cadastrar</button>
-          <button>Logar</button>
+        <div className="flex gap-4">
+          <button className=" w-28 h-12 m-auto bg-[#2B59FF] text-primary rounded-full">
+            Cadastrar
+          </button>
+          <button className="w-24 h-12 m-auto bg-[#2B59FF] text-primary rounded-full">
+            Logar
+          </button>
         </div>
       </div>
     </section>
