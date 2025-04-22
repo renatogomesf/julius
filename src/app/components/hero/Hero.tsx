@@ -1,13 +1,13 @@
 import Image from 'next/image';
 
-import Dashboard from '@/app/images/dashboard.png';
+import Dashboard from '@/app/image/dashboard.png';
 
 export default function Hero() {
   return (
     <section className="max-w-[1440px] m-auto">
       <div className="">
         <h1 className="text-primary m-auto max-w-[856px] text-[5rem] font-space_grotesk font-bold text-center mb-6 mt-20 leading-[5.3rem] tracking-[-1px]">
-          Easy way to achieve customer satisfaction
+          Maneira fácil de ter tudo no seu controle
         </h1>
 
         <p className="text-terciary text-[1.3rem] font-extralight text-center leading-[2rem] m-auto max-w-[770px]">
