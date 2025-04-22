@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <section className="max-w-[1440px] m-auto">
       <div className="flex items-center justify-between pt-5 pl-14 pr-14 text-primary">
-        <Image src={'/logojuntabranca.png'} alt="logo" width={100} height={0} />
+        <Image src={'/logojunta02.png'} alt="logo" width={100} height={0} />
 
         <nav>
           <ul className="flex justify-between gap-5">
