@@ -5,6 +5,7 @@ import Info02 from './components/info02/Info02';
 import Info03 from './components/info03/Info03';
 import Info04 from './components/info04/Info04';
 import Price from './components/price/Price';
+import Footer from './components/footer/Footer';
 
 export default function Home() {
   return (
@@ -27,6 +28,9 @@ export default function Home() {
       </section>
       <section>
         <Price />
+      </section>
+      <section className="mt-[204px]">
+        <Footer />
       </section>
     </div>
   );

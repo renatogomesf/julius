@@ -14,7 +14,7 @@ export default function Hero() {
           project management experience.
         </p>
 
-        <div className="flex items-center justify-center w-36 h-12 m-auto bg-[#2B59FF] text-primary rounded-full mt-10 text-[0.9rem]">
+        <div className="flex items-center justify-center w-36 h-12 m-auto bg-[#2B59FF] text-primary rounded-[4.25px] mt-10 text-[0.9rem]">
           Vamos começar
         </div>
 
