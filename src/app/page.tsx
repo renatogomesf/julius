@@ -4,15 +4,16 @@ import Info01 from './components/info01/Info01';
 import Info02 from './components/info02/Info02';
 import Info03 from './components/info03/Info03';
 import Info04 from './components/info04/Info04';
+import Price from './components/price/Price';
 
 export default function Home() {
   return (
     <div>
-      <section className="bg-secondary h-[1080px]">
+      <section className="bg-secondary h-[918px]">
         <Header />
         <Hero />
       </section>
-      <section className="mt-96 mb-32">
+      <section className="mt-75 mb-20">
         <Info01 />
       </section>
       <section>
@@ -23,6 +24,9 @@ export default function Home() {
       </section>
       <section>
         <Info04 />
+      </section>
+      <section>
+        <Price />
       </section>
     </div>
   );
