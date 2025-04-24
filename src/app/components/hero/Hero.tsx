@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <div className="max-w-[1440px] m-auto">
+    <div className="max-w-[1440px] m-auto pl-4 pr-4">
       <div className="">
         <h1 className="text-primary m-auto max-w-[727px] text-[4.3rem] font-space_grotesk font-bold text-center mb-5 mt-16 leading-[4.5rem] tracking-[-1px]">
           Maneira fácil de ter tudo no seu controle

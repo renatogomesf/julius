@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function Info03() {
   return (
     <div>
-      <div className="flex items-center justify-center gap-44 max-w-[895px] m-auto mt-27 mb-27">
+      <div className="flex pl-4 pr-4 items-center justify-center gap-44 max-w-[895px] m-auto mt-27 mb-27 max-[821px]:flex-col-reverse max-[821px]:gap-32">
         <Image
           className="drop-shadow-xl rounded-2xl"
           src={'/costumers.png'}
@@ -11,7 +11,7 @@ export default function Info03() {
           width={388}
           height={331}
         />
-        <div>
+        <div className="max-w-[500px]">
           <h3 className="font-space_grotesk font-bold text-[2.2rem] leading-10 mb-6">
             Managing & selling digital products is now easier.
           </h3>

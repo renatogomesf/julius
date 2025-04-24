@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <div className="bg-secondary text-primary relative">
-      <section className="bg-[#2B59FF] w-[1100px] h-[323px] m-auto rounded-[8.5px] absolute left-[10%] right-[10%] bottom-[403px]">
+    <div className="text-primary relative pl-4 pr-4">
+      <section className="pl-4 pr-4 bg-[#2B59FF] max-w-[1100px] h-[323px] m-auto rounded-[8.5px] absolute left-[10%] right-[10%] top-[-160px] max-sm:h-fit max-sm:top-[-15%]">
         <div className="max-w-[515px] m-auto pt-16 pb-16">
           <h1 className="font-space_grotesk font-bold text-[2.5rem] leading-13 text-center mb-5">
             Start learning new things & build your skills today
@@ -25,9 +25,15 @@ export default function Footer() {
         </div>
       </section>
 
-      <section className="max-w-[1100px] m-auto pt-[247px] flex justify-between">
-        <div className="max-w-[322px]">
-          <Image src={'/logojunta02.png'} alt="logo" width={100} height={0} />
+      <section className="max-w-[1100px] m-auto pt-[247px] flex justify-between max-[769px]:flex-col max-sm:pt-[350px]">
+        <div className="max-w-[322px] max-[769px]:mb-10">
+          <Image
+            className="max-[425px]:pt-[100px]"
+            src={'/logojunta02.png'}
+            alt="logo"
+            width={100}
+            height={0}
+          />
 
           <p className="leading-[160%] text-[0.9rem] mt-7 mb-5 text-white/80">
             Data analysis software is a type of software tool used for data
@@ -42,31 +48,35 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex gap-15">
-          <div>
-            <h4 className="font-semibold text-[0.95rem] mb-6">Company</h4>
+        <div className="flex gap-15 max-sm:flex-col">
+          <div className="flex gap-15">
+            <div>
+              <h4 className="font-semibold text-[0.95rem] mb-6">Company</h4>
 
-            <ul className="flex flex-col gap-4">
-              <li className="text-[0.74rem] text-white/80">Service</li>
+              <ul className="flex flex-col gap-4">
+                <li className="text-[0.74rem] text-white/80">Service</li>
 
-              <li className="text-[0.74rem] text-white/80">Resources</li>
+                <li className="text-[0.74rem] text-white/80">Resources</li>
 
-              <li className="text-[0.74rem] text-white/80">About us</li>
-            </ul>
-          </div>
+                <li className="text-[0.74rem] text-white/80">About us</li>
+              </ul>
+            </div>
 
-          <div>
-            <h4 className="font-semibold text-[0.95rem] mb-6">Help</h4>
+            <div>
+              <h4 className="font-semibold text-[0.95rem] mb-6">Help</h4>
 
-            <ul className="flex flex-col gap-4">
-              <li className="text-[0.74rem] text-white/80">Customer Support</li>
+              <ul className="flex flex-col gap-4">
+                <li className="text-[0.74rem] text-white/80">
+                  Customer Support
+                </li>
 
-              <li className="text-[0.74rem] text-white/80">
-                Terms & Conditions
-              </li>
+                <li className="text-[0.74rem] text-white/80">
+                  Terms & Conditions
+                </li>
 
-              <li className="text-[0.74rem] text-white/80">Privacy Policy</li>
-            </ul>
+                <li className="text-[0.74rem] text-white/80">Privacy Policy</li>
+              </ul>
+            </div>
           </div>
 
           <div>

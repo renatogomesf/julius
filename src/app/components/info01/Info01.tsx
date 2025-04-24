@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 export default function Info01() {
   return (
-    <div>
-      <div className="flex items-center justify-center max-w-[1000px] m-auto gap-28">
+    <div className="pl-4 pr-4">
+      <div className="grid grid-cols-[265px_265px_265px] justify-between max-w-[1000px] m-auto max-[821px]:grid max-[821px]:grid-cols-[265px_265px] max-[821px]:justify-around max-[821px]:gap-y-14 max-sm:grid-cols-[265px]">
         <div>
           <Image src={'/icon01.png'} alt="icon" width={34} height={34} />
           <h3 className="font-bold text-[1.3rem] leading-7 mt-8 mb-3">

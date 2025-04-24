@@ -17,19 +17,19 @@ export default function Home() {
       <section className="mt-75 mb-20">
         <Info01 />
       </section>
-      <section>
+      <section className="bg-terciary">
         <Info02 />
       </section>
       <section>
         <Info03 />
       </section>
-      <section>
+      <section className="bg-secondary">
         <Info04 />
       </section>
       <section>
         <Price />
       </section>
-      <section className="mt-[204px]">
+      <section className="mt-[204px] bg-secondary">
         <Footer />
       </section>
     </div>

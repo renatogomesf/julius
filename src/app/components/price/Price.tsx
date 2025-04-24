@@ -1,7 +1,7 @@
 export default function Price() {
   return (
     <div>
-      <div className="max-w-[926px] m-auto mt-21 mb-21">
+      <div className="max-w-[926px] m-auto mt-21 mb-21 pl-4 pr-4">
         <h2 className="font-space_grotesk font-bold text-[2.5rem] text-center leading-13">
           Pricing & Plans
         </h2>
@@ -11,7 +11,7 @@ export default function Price() {
           use them. The more orders your company
         </p>
 
-        <div className="flex gap-4 items-end">
+        <div className="flex gap-4 items-end max-[821px]:flex-col max-[821px]:items-center">
           <div className="text-center bg-gray-100 w-75 p-6 rounded-[8.5px]">
             <h3 className="font-bold text-[0.8rem] tracking-[1.3px]">BASIC</h3>
 
