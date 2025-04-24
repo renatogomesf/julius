@@ -9,7 +9,7 @@ import Footer from './components/footer/Footer';
 
 export default function Home() {
   return (
-    <div>
+    <div className="">
       <section className="bg-secondary h-[918px]">
         <Header />
         <Hero />

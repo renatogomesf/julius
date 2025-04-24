@@ -2,7 +2,7 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@theme {
+@theme inline {
   /* Landing Pange */
   /* colors */
   --color-primary: #ffffff;
@@ -15,13 +15,244 @@
   /* ----------------------------------------------------- */
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
+@utility escuro {
+  background-color: red;
+  width: 500px;
+  color: blue;
+}
 
 body {
   font-family: var(--font-inter);
+}
+
+.menuBordasClose {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 35px;
+  height: 25px;
+  /* border: 1px solid white; */
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .menuBordasClose {
+    display: none;
+  }
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+.menuBordasClose::before {
+  position: absolute;
+  top: -2px;
+  content: '';
+  width: 25px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: white;
+  animation: beforeClose 0.3s;
+}
+
+@keyframes beforeClose {
+  from {
+    transform: rotate(-45deg);
+    top: 9px;
+    background-color: #12141d;
+  }
+  to {
+    transform: rotate(0deg);
+    top: -2px;
+    background-color: white;
+  }
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+.menuBordasClose::after {
+  position: absolute;
+  bottom: -2px;
+  content: '';
+  width: 25px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: white;
+  animation: afterMove 0.3s;
+}
+
+@keyframes afterMove {
+  from {
+    transform: rotate(45deg);
+    bottom: 10px;
+    background-color: #12141d;
+  }
+  to {
+    transform: rotate(0deg);
+    bottom: -2px;
+    background-color: white;
+  }
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+.menuCentroClose {
+  width: 35px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: white;
+  animation: showLine 0.3s;
+  opacity: 1;
+}
+
+@keyframes showLine {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ----------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------- */
+
+.menuBordasOpen::before {
+  position: absolute;
+  top: -2px;
+  content: '';
+  width: 25px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: white;
+  animation: beforeOpen 0.3s forwards;
+}
+
+@keyframes beforeOpen {
+  from {
+    transform: rotate(0deg);
+    top: -2px;
+    background-color: white;
+  }
+  to {
+    transform: rotate(-45deg);
+    top: 9px;
+    background-color: #12141d;
+  }
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+.menuBordasOpen::after {
+  position: absolute;
+  bottom: -2px;
+  content: '';
+  width: 25px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: white;
+  animation: afterOpen 0.3s forwards;
+}
+
+@keyframes afterOpen {
+  from {
+    transform: rotate(0deg);
+    bottom: -2px;
+    background-color: white;
+  }
+  to {
+    transform: rotate(45deg);
+    bottom: 10px;
+    background-color: #12141d;
+  }
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+.menuCentroOpen {
+  width: 35px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: white;
+  animation: hiddenLine 0.3s forwards;
+  opacity: 0;
+}
+
+@keyframes hiddenLine {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  nav > ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .itens {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 89px 15px 15px 15px;
+    width: 230px;
+    height: fit-content;
+    color: black;
+    border-radius: 0px 0px 0px 10px;
+  }
+
+  .itensClose {
+    position: absolute;
+    top: -430px;
+    right: 0px;
+    animation: closeMenu 0.5s forwards;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.281);
+  }
+
+  @keyframes closeMenu {
+    from {
+      top: 0px;
+      height: 100vh;
+    }
+    to {
+      top: -430px;
+      height: 0vh;
+    }
+  }
+
+  .itensOpen {
+    position: absolute;
+    top: -430px;
+    right: 0px;
+    animation: openMenu 0.5s forwards;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.281);
+  }
+
+  @keyframes openMenu {
+    from {
+      top: -430px;
+      height: 0vh;
+    }
+    to {
+      top: 0px;
+      height: 100vh;
+    }
+  }
 }
