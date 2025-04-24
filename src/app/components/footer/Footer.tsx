@@ -25,7 +25,7 @@ export default function Footer() {
         </div>
       </section>
 
-      <section className="max-w-[1100px] m-auto pt-[247px]">
+      <section className="max-w-[1100px] m-auto pt-[247px] flex justify-between">
         <div className="max-w-[322px]">
           <Image src={'/logojunta02.png'} alt="logo" width={100} height={0} />
 
@@ -42,15 +42,61 @@ export default function Footer() {
           </div>
         </div>
 
-        <div></div>
+        <div className="flex gap-15">
+          <div>
+            <h4 className="font-semibold text-[0.95rem] mb-6">Company</h4>
 
-        <div className="mt-21">
-          <hr className="border-[1px] border-white/70" />
-          <p className="text-center pt-7 pb-7 text-[0.75rem]">
-            © Copyright 2021, All Rights Reserved by stract
-          </p>
+            <ul className="flex flex-col gap-4">
+              <li className="text-[0.74rem] text-white/80">Service</li>
+
+              <li className="text-[0.74rem] text-white/80">Resources</li>
+
+              <li className="text-[0.74rem] text-white/80">About us</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-[0.95rem] mb-6">Help</h4>
+
+            <ul className="flex flex-col gap-4">
+              <li className="text-[0.74rem] text-white/80">Customer Support</li>
+
+              <li className="text-[0.74rem] text-white/80">
+                Terms & Conditions
+              </li>
+
+              <li className="text-[0.74rem] text-white/80">Privacy Policy</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-[0.95rem] mb-6">
+              Subscribe to Newsletter
+            </h4>
+
+            <div className="flex items-center">
+              <input
+                className="w-53 h-11 bg-white rounded-tl-[7px] rounded-bl-[7px] text-[#8a8a8a] text-[0.75rem] pl-4 p-3.5"
+                type="text"
+                name="email"
+                id=""
+                placeholder="Enter email address"
+              />
+
+              <button className="w-29.5 h-11 bg-[#2B59FF] rounded-tr-[7px] rounded-br-[7px] font-bold text-[0.85rem]">
+                Join
+              </button>
+            </div>
+          </div>
         </div>
       </section>
+      <div className="mt-21 max-w-[1100px] m-auto">
+        <hr className="border-[1px] border-white/70" />
+
+        <p className="text-center pt-7 pb-7 text-[0.75rem]">
+          © Copyright 2021, All Rights Reserved by stract
+        </p>
+      </div>
     </div>
   );
 }
