@@ -40,7 +40,7 @@ export default function Header() {
 
   return (
     <header className="relative max-w-[1440px] m-auto z-10 shadow-2xs">
-      <div className="fixed w-full bg-secondary flex items-center justify-between pt-5 pb-5 max-sm:pt-2 max-sm:pb-2 pl-14 pr-14 max-sm:pl-5 max-sm:pr-5 text-primary">
+      <div className="fixed w-full bg-secondary flex items-center justify-between pt-3 pb-3 max-sm:pt-2 max-sm:pb-2 pl-14 pr-14 max-sm:pl-5 max-sm:pr-5 text-primary">
         <Image src={'/logojunta02.png'} alt="logo" width={100} height={0} />
 
         <div className="menuBordas" onClick={menu}>
