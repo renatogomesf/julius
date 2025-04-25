@@ -5,7 +5,7 @@ import Footer from './components/footer/Footer';
 export default function Home() {
   return (
     <div>
-      <Header />
+      <Header bg={'bg-secondary'} textColor={'text-primary'} />
       <Main />
       <Footer />
     </div>
