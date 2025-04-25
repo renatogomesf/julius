@@ -1,32 +1,55 @@
 'use client';
 
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function Header() {
+  const [menuState, setMenuState] = useState(false);
+
   const menu = () => {
-    const menuBordas = document.querySelector('.menuBordasClose');
-    const menuCentro = document.querySelector('.menuCentroClose');
+    if (menuState) {
+      const itensMenu = document.querySelector('.itens');
+      itensMenu?.classList.add('itensClose');
+      itensMenu?.classList.remove('itensOpen');
 
-    menuBordas?.classList.toggle('menuBordasOpen');
-    menuCentro?.classList.toggle('menuCentroOpen');
+      const menuBordas = document.querySelector('.menuBordas');
+      menuBordas?.classList.add('menuBordasClose');
+      menuBordas?.classList.remove('menuBordasOpen');
 
-    const itensMenu = document.querySelector('.itensClose');
+      const menuCentro = document.querySelector('.menuCentro');
+      menuCentro?.classList.add('menuCentroClose');
+      menuCentro?.classList.remove('menuCentroOpen');
 
-    itensMenu?.classList.toggle('itensOpen');
+      setMenuState(false);
+    } else {
+      const itensMenu = document.querySelector('.itens');
+      itensMenu?.classList.add('itensOpen');
+      itensMenu?.classList.remove('itensClose');
+
+      const menuBordas = document.querySelector('.menuBordas');
+      menuBordas?.classList.add('menuBordasOpen');
+      menuBordas?.classList.remove('menuBordasClose');
+
+      const menuCentro = document.querySelector('.menuCentro');
+      menuCentro?.classList.add('menuCentroOpen');
+      menuCentro?.classList.remove('menuCentroClose');
+
+      setMenuState(true);
+    }
   };
 
   return (
     <header className="relative max-w-[1440px] m-auto z-10 shadow-2xs">
-      <div className="fixed w-full bg-secondary flex items-center justify-between pt-5 pb-5 pl-14 pr-14 max-sm:pl-5 max-sm:pr-5 text-primary">
+      <div className="fixed w-full bg-secondary flex items-center justify-between pt-5 pb-5 max-sm:pt-2 max-sm:pb-2 pl-14 pr-14 max-sm:pl-5 max-sm:pr-5 text-primary">
         <Image src={'/logojunta02.png'} alt="logo" width={100} height={0} />
 
-        <div className="menuBordasClose" onClick={menu}>
-          <div className="menuCentroClose"></div>
+        <div className="menuBordas" onClick={menu}>
+          <div className="menuCentro"></div>
         </div>
 
         {/* max-md:hidden */}
-        <div className="itensClose">
-          <div className="itens flex items-center justify-between gap-10">
+        <div className="itens">
+          <div className="flex items-center justify-between gap-10">
             <nav className="">
               <ul className="flex justify-between gap-5">
                 <li>Produto</li>
