@@ -8,7 +8,7 @@ export default function Hero() {
           Maneira fácil de ter tudo no seu controle
         </h1>
 
-        <p className="text-terciary/70 text-[1.1rem] font-extralight text-center leading-[1.7rem] m-auto max-w-[655px]">
+        <p className="text-terciary text-[1.1rem] font-extralight text-center leading-[1.7rem] m-auto max-w-[655px]">
           Providing all customer service within one software. Our landing page
           template works on all devices and we have completely redesigned the
           project management experience.

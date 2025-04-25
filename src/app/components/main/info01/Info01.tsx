@@ -9,7 +9,7 @@ export default function Info01() {
           <h3 className="font-bold text-[1.3rem] leading-7 mt-8 mb-3">
             Multiple Modern Layouts
           </h3>
-          <p className="text-[0.85rem] leading-6 text-secondary/70">
+          <p className="text-[0.85rem] leading-6 text-secondary">
             With lots of unique blocks, you can easily build a page without
             coding. Build your next landing page quickly.
           </p>
@@ -20,7 +20,7 @@ export default function Info01() {
           <h3 className="font-bold text-[1.3rem] leading-7 mt-8 mb-3">
             Multiple Modern Layouts
           </h3>
-          <p className="text-[0.85rem] leading-6 text-secondary/70">
+          <p className="text-[0.85rem] leading-6 text-secondary">
             With lots of unique blocks, you can easily build a page without
             coding. Build your next landing page quickly.
           </p>
@@ -31,7 +31,7 @@ export default function Info01() {
           <h3 className="font-bold text-[1.3rem] leading-7 mt-8 mb-3">
             Multiple Modern Layouts
           </h3>
-          <p className="text-[0.85rem] leading-6 text-secondary/70">
+          <p className="text-[0.85rem] leading-6 text-secondary">
             With lots of unique blocks, you can easily build a page without
             coding. Build your next landing page quickly.
           </p>

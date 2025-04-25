@@ -16,7 +16,7 @@ export default function Info02() {
                 <h3 className="font-bold text-[1.1rem] mb-3">
                   Simply Copy & Paste
                 </h3>
-                <p className="text-[0.85rem] leading-[1.4rem] text-secondary/70">
+                <p className="text-[0.85rem] leading-[1.4rem] text-secondary">
                   Many desktop publishing packages and web page editors now use
                   for them.
                 </p>
@@ -29,7 +29,7 @@ export default function Info02() {
                 <h3 className="font-bold text-[1.1rem] mb-3">
                   Easy to Customize
                 </h3>
-                <p className="text-[0.85rem] leading-[1.4rem] text-secondary/70">
+                <p className="text-[0.85rem] leading-[1.4rem] text-secondary">
                   Many desktop publishing packages and web page editors now use
                   for them.
                 </p>
@@ -42,7 +42,7 @@ export default function Info02() {
                 <h3 className="font-bold text-[1.1rem] mb-3">
                   Made with TailwindCSS
                 </h3>
-                <p className="text-[0.85rem] leading-[1.4rem] text-secondary/70">
+                <p className="text-[0.85rem] leading-[1.4rem] text-secondary">
                   Many desktop publishing packages and web page editors now use
                   for them.
                 </p>

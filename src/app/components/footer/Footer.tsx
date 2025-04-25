@@ -35,7 +35,7 @@ export default function Footer() {
             height={0}
           />
 
-          <p className="leading-[160%] text-[0.9rem] mt-7 mb-5 text-white/80">
+          <p className="leading-[160%] text-[0.9rem] mt-7 mb-5 text-white">
             Data analysis software is a type of software tool used for data
             analysis and reporting.
           </p>
@@ -54,11 +54,11 @@ export default function Footer() {
               <h4 className="font-semibold text-[0.95rem] mb-6">Company</h4>
 
               <ul className="flex flex-col gap-4">
-                <li className="text-[0.74rem] text-white/80">Service</li>
+                <li className="text-[0.74rem] text-white">Service</li>
 
-                <li className="text-[0.74rem] text-white/80">Resources</li>
+                <li className="text-[0.74rem] text-white">Resources</li>
 
-                <li className="text-[0.74rem] text-white/80">About us</li>
+                <li className="text-[0.74rem] text-white">About us</li>
               </ul>
             </div>
 
@@ -66,15 +66,13 @@ export default function Footer() {
               <h4 className="font-semibold text-[0.95rem] mb-6">Help</h4>
 
               <ul className="flex flex-col gap-4">
-                <li className="text-[0.74rem] text-white/80">
-                  Customer Support
-                </li>
+                <li className="text-[0.74rem] text-white">Customer Support</li>
 
-                <li className="text-[0.74rem] text-white/80">
+                <li className="text-[0.74rem] text-white">
                   Terms & Conditions
                 </li>
 
-                <li className="text-[0.74rem] text-white/80">Privacy Policy</li>
+                <li className="text-[0.74rem] text-white">Privacy Policy</li>
               </ul>
             </div>
           </div>
@@ -86,7 +84,7 @@ export default function Footer() {
 
             <div className="flex items-center">
               <input
-                className="w-53 h-11 bg-white rounded-tl-[7px] rounded-bl-[7px] text-[#8a8a8a] text-[0.75rem] pl-4 p-3.5"
+                className="w-53 h-11 bg-white rounded-tl-[7px] rounded-bl-[7px] text-[#000] text-[0.8rem] pl-4 p-3.5"
                 type="text"
                 name="email"
                 id=""
