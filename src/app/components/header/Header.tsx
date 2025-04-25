@@ -43,7 +43,7 @@ export default function Header() {
       <div className="fixed w-full bg-secondary flex items-center justify-between pt-3 pb-3 max-sm:pt-2 max-sm:pb-2 pl-14 pr-14 max-sm:pl-5 max-sm:pr-5 text-primary">
         <Image src={'/logojunta02.png'} alt="logo" width={100} height={0} />
 
-        <div className="menuBordas" onClick={menu}>
+        <div className="menuBordas sm:hidden" onClick={menu}>
           <div className="menuCentro"></div>
         </div>
 
@@ -61,11 +61,11 @@ export default function Header() {
 
             <div className="flex justify-between">
               <div className="buttons flex gap-4">
-                <button className=" w-28 h-12 m-auto bg-[#2B59FF] text-primary rounded-full">
+                <button className=" w-28 h-12 m-auto bg-[#2B59FF] text-primary rounded-[4.25px]">
                   Cadastrar
                 </button>
 
-                <button className="w-24 h-12 m-auto bg-[#2B59FF] text-primary rounded-full">
+                <button className="w-28 h-12 m-auto bg-[#2B59FF] text-primary rounded-[4.25px]">
                   Logar
                 </button>
               </div>

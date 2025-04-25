@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <div className="max-w-[1440px] m-auto pl-4 pr-4">
+    <section className="max-w-[1440px] m-auto pl-4 pr-4 bg-secondary h-[918px]">
       <div className="">
         <h1 className="text-primary m-auto max-w-[727px] text-[4.3rem] font-space_grotesk font-bold text-center mb-5 pt-36 leading-[4.5rem] tracking-[-1px]">
           Maneira fácil de ter tudo no seu controle
@@ -26,6 +26,6 @@ export default function Hero() {
           alt="dashboard"
         />
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,6 +1,6 @@
 export default function Price() {
   return (
-    <div>
+    <section>
       <div className="max-w-[926px] m-auto mt-21 mb-21 pl-4 pr-4">
         <h2 className="font-space_grotesk font-bold text-[2.5rem] text-center leading-13">
           Pricing & Plans
@@ -70,6 +70,6 @@ export default function Price() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

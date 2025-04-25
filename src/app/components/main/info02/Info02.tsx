@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Info02() {
   return (
-    <div className="pl-4 pr-4">
+    <section className="pl-4 pr-4 bg-terciary">
       <div className="max-w-[1440px] m-auto pb-28">
         <h1 className="font-space_grotesk text-[2.5rem] font-bold leading-13 text-center max-w-[450px] m-auto pt-28 pb-20 ">
           Mixland helps you build beautiful website
@@ -61,6 +61,6 @@ export default function Info02() {
           </aside>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

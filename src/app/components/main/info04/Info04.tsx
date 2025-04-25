@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Info04() {
   return (
-    <div className="text-primary pl-4 pr-4">
+    <section className="text-primary pl-4 pr-4 bg-secondary">
       <div className="flex items-center justify-center gap-36 max-w-[1070px] m-auto pt-24 pb-24 max-[1025px]:gap-2 max-[821px]:flex-col max-[821px]:items-center">
         <div className="max-[821px]:max-w-[500px] max-[821px]:pb-5">
           <h3 className="font-space_grotesk font-bold text-[2.2rem] leading-10 max-sm:pl-4 max-sm:pr-4">
@@ -46,6 +46,6 @@ export default function Info04() {
           height={391}
         />
       </div>
-    </div>
+    </section>
   );
 }

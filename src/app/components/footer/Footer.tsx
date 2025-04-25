@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <div className="text-primary relative pl-4 pr-4">
+    <footer className="text-primary relative pl-4 pr-4 mt-[204px] bg-secondary">
       <section className="pl-4 pr-4 bg-[#2B59FF] max-w-[1100px] h-[323px] m-auto rounded-[8.5px] absolute left-[10%] right-[10%] top-[-160px] max-sm:h-fit max-sm:top-[-15%]">
         <div className="max-w-[515px] m-auto pt-16 pb-16">
           <h1 className="font-space_grotesk font-bold text-[2.5rem] leading-13 text-center mb-5">
@@ -107,6 +107,6 @@ export default function Footer() {
           © Copyright 2021, All Rights Reserved by stract
         </p>
       </div>
-    </div>
+    </footer>
   );
 }
