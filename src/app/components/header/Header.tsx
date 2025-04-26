@@ -51,24 +51,51 @@ export default function Header({
   };
 
   return (
-    <header className="relative max-w-[1440px] m-auto z-10 shadow-2xs">
+    <header
+      className={`relative flex justify-center max-w-[1440px] m-auto z-10 shadow-2xs`}
+    >
       <div
-        className={`fixed w-full flex items-center justify-between pt-3 pb-3 max-sm:pt-2 max-sm:pb-2 pl-14 pr-14 max-sm:pl-5 max-sm:pr-5 ${textColor} ${bg}`}
+        className={`fixed w-full flex items-center justify-between sm:pt-3 sm:pb-3 sm:pl-14 sm:pr-14  ${textColor} ${bg}`}
       >
-        <Link href={'/'}>
-          {isActive ? (
-            <Image src={'/logojunta01.png'} alt="logo" width={80} height={60} />
-          ) : (
-            <Image src={'/logojunta02.png'} alt="logo" width={80} height={60} />
-          )}
-        </Link>
+        <div
+          className={`flex items-center justify-between w-full z-10 max-sm:pt-2 max-sm:pb-2 max-sm:pl-5 max-sm:pr-5 ${
+            isActive ? 'bg-[#F9F9FA]' : `${bg}`
+          }`}
+        >
+          <Link href={'/'}>
+            {isActive ? (
+              <Image
+                src={'/logojunta01.png'}
+                alt="logo"
+                width={80}
+                height={60}
+              />
+            ) : (
+              <Image
+                src={'/logojunta02.png'}
+                alt="logo"
+                width={80}
+                height={60}
+              />
+            )}
+          </Link>
 
-        <div className="menuBordas sm:hidden" onClick={menu}>
-          <div className="menuCentro"></div>
+          <div
+            className={`menuBordas sm:hidden ${
+              isActive
+                ? 'before:bg-black after:bg-black'
+                : 'before:bg-white after:bg-white'
+            }`}
+            onClick={menu}
+          >
+            <div
+              className={`menuCentro ${isActive ? 'bg-black' : 'bg-white'}`}
+            ></div>
+          </div>
         </div>
 
         {/* max-md:hidden */}
-        <div className="itens">
+        <div className="itens z-9">
           <div className="flex items-center justify-between gap-10">
             <nav className="">
               <ul className="flex justify-between gap-5">

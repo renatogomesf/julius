@@ -42,7 +42,6 @@ body {
   width: 25px;
   height: 4px;
   border-radius: 2px;
-  background-color: white;
 }
 
 .menuBordas::after {
@@ -52,7 +51,6 @@ body {
   width: 25px;
   height: 4px;
   border-radius: 2px;
-  background-color: white;
 }
 
 @media (min-width: 768px) {
@@ -78,7 +76,6 @@ body {
   width: 25px;
   height: 4px;
   border-radius: 2px;
-  background-color: white;
   animation: beforeClose 0.3s forwards;
 }
 
@@ -86,12 +83,10 @@ body {
   from {
     transform: rotate(-45deg);
     top: 9px;
-    background-color: #12141d;
   }
   to {
     transform: rotate(0deg);
     top: -2px;
-    background-color: white;
   }
 }
 
@@ -102,7 +97,6 @@ body {
   width: 25px;
   height: 4px;
   border-radius: 2px;
-  background-color: white;
   animation: afterMove 0.3s forwards;
 }
 
@@ -110,12 +104,10 @@ body {
   from {
     transform: rotate(45deg);
     bottom: 10px;
-    background-color: #12141d;
   }
   to {
     transform: rotate(0deg);
     bottom: -2px;
-    background-color: white;
   }
 }
 
@@ -139,7 +131,6 @@ body {
   width: 25px;
   height: 4px;
   border-radius: 2px;
-  background-color: white;
   animation: beforeOpen 0.3s forwards;
 }
 
@@ -147,12 +138,10 @@ body {
   from {
     transform: rotate(0deg);
     top: -2px;
-    background-color: white;
   }
   to {
     transform: rotate(-45deg);
     top: 10px;
-    background-color: #12141d;
   }
 }
 
@@ -163,7 +152,6 @@ body {
   width: 25px;
   height: 4px;
   border-radius: 2px;
-  background-color: white;
   animation: afterOpen 0.3s forwards;
 }
 
@@ -171,12 +159,10 @@ body {
   from {
     transform: rotate(0deg);
     bottom: -2px;
-    background-color: white;
   }
   to {
     transform: rotate(45deg);
     bottom: 10px;
-    background-color: #12141d;
   }
 }
 
@@ -188,14 +174,9 @@ body {
   width: 35px;
   height: 4px;
   border-radius: 2px;
-  background-color: white;
 }
 
 .menuCentroClose {
-  /* width: 35px;
-  height: 4px;
-  border-radius: 2px;
-  background-color: white; */
   animation: showLine 0.3s forwards;
   opacity: 1;
 }
@@ -210,10 +191,6 @@ body {
 }
 
 .menuCentroOpen {
-  /* width: 35px;
-  height: 4px;
-  border-radius: 2px;
-  background-color: white; */
   animation: hiddenLine 0.3s forwards;
   opacity: 0;
 }
@@ -293,7 +270,7 @@ body {
       height: 0vh;
     }
     to {
-      top: 0px;
+      top: 55px;
       height: 100vh;
     }
   }
