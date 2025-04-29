@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import Link from 'next/link';
+
 export default function Login() {
   return (
     <div className="bg-[#F9F9FA] flex items-center justify-center h-screen">
@@ -50,9 +52,13 @@ export default function Login() {
           </div>
 
           <div className="flex flex-col items-center mt-7">
-            <button className="w-96 h-10 bg-black text-white rounded-[12px] pt-2 pb-2 pl-4 pr-4">
+            <Link
+              href={'/dashboard'}
+              className="text-center w-96 h-10 bg-black text-white rounded-[12px] pt-2 pb-2 pl-4 pr-4"
+            >
               <p>Sign In</p>
-            </button>
+            </Link>
+
             <p className="text-[0.9rem] text-black/40 mt-7">
               Not a Member yet?{' '}
               <a href="" className="text-[0.9rem] text-[#9f9ff8]">

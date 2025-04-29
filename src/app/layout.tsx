@@ -15,7 +15,10 @@ const space_grotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Julius',
+  title: {
+    template: 'julius | %s',
+    default: 'julius',
+  },
   description: 'Plataforma de controle financeiro pessoal.',
   icons: {
     icon: ['/favicon.png'],
