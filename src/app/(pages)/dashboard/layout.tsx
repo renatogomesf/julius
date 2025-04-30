@@ -5,17 +5,17 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-// import {
-//   LuTelescope,
-//   LuTrendingUp,
-//   LuTrendingDown,
-//   LuSquareArrowDown,
-//   LuSquareArrowUp,
-//   // LuBanknote,
-//   LuCoins,
-//   LuBolt,
-//   LuGoal,
-// } from 'react-icons/lu';
+import {
+  LuTelescope,
+  LuTrendingUp,
+  LuTrendingDown,
+  LuSquareArrowDown,
+  LuSquareArrowUp,
+  // LuBanknote,
+  LuCoins,
+  LuBolt,
+  LuGoal,
+} from 'react-icons/lu';
 
 export default function LayoutDashboard({
   children,
@@ -82,7 +82,7 @@ export default function LayoutDashboard({
                       overview ? 'bg-black/5' : ''
                     }`}
                   >
-                    {/* <LuTelescope className="w-[20px] h-[20px]" /> */}
+                    <LuTelescope className="w-[20px] h-[20px]" />
                     Visão geral
                   </Link>
                 </li>
@@ -94,7 +94,7 @@ export default function LayoutDashboard({
                       metas ? 'bg-black/5' : ''
                     }`}
                   >
-                    {/* <LuGoal className="w-[20px] h-[20px]" /> */}
+                    <LuGoal className="w-[20px] h-[20px]" />
                     Metas
                   </Link>
                 </li>
@@ -111,7 +111,7 @@ export default function LayoutDashboard({
                       ganhos ? 'bg-black/5' : ''
                     }`}
                   >
-                    {/* <LuTrendingUp className="w-[20px] h-[20px] " /> */}
+                    <LuTrendingUp className="w-[20px] h-[20px] " />
                     Ganhos
                   </Link>
                 </li>
@@ -122,7 +122,7 @@ export default function LayoutDashboard({
                       despesas ? 'bg-black/5' : ''
                     }`}
                   >
-                    {/* <LuTrendingDown className="w-[20px] h-[20px] " /> */}
+                    <LuTrendingDown className="w-[20px] h-[20px] " />
                     Despesas
                   </Link>
                 </li>
@@ -139,7 +139,7 @@ export default function LayoutDashboard({
                       medevendo ? 'bg-black/5' : ''
                     } `}
                   >
-                    {/* <LuSquareArrowUp className="w-[20px] h-[20px] " /> */}
+                    <LuSquareArrowUp className="w-[20px] h-[20px] " />
                     Me devem
                   </Link>
                 </li>
@@ -150,7 +150,7 @@ export default function LayoutDashboard({
                       devendopara ? 'bg-black/5' : ''
                     } `}
                   >
-                    {/* <LuSquareArrowDown className="w-[20px] h-[20px] " /> */}
+                    <LuSquareArrowDown className="w-[20px] h-[20px] " />
                     Devendo
                   </Link>
                 </li>
@@ -167,7 +167,7 @@ export default function LayoutDashboard({
                       moedas ? 'bg-black/5' : ''
                     } `}
                   >
-                    {/* <LuCoins className="w-[20px] h-[20px] " /> */}
+                    <LuCoins className="w-[20px] h-[20px] " />
                     Moedas
                   </Link>
                 </li>
@@ -180,7 +180,7 @@ export default function LayoutDashboard({
               href={''}
               className="text-[0.9rem] flex items-center justify-start gap-2 mt-3 hover:bg-black/5 rounded-[12px] p-2"
             >
-              {/* <LuBolt className="w-[20px] h-[20px] " /> */}
+              <LuBolt className="w-[20px] h-[20px] " />
               Configurações
             </Link>
           </div>
