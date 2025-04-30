@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 // import {
 //   LuTelescope,
@@ -30,6 +31,33 @@ export default function LayoutDashboard({
   const medevendo = pathName.endsWith('/medevendo');
   const devendopara = pathName.endsWith('/devendopara');
   const moedas = pathName.endsWith('/moedas');
+
+  const [horas, setHoras] = useState<number>();
+  const [minutos, setMinutos] = useState<number>();
+
+  const [dia, setDia] = useState<number>();
+  const [mes, setMes] = useState<string | number>();
+  const [ano, setAno] = useState<number>();
+
+  useEffect(() => {
+    setInterval(() => {
+      const timer = new Date();
+
+      setHoras(timer.getHours());
+      setMinutos(timer.getMinutes());
+    }, 1000);
+
+    const data = new Date();
+
+    setDia(data.getDate());
+    setAno(data.getFullYear());
+
+    if (data.getMonth() < 10) {
+      setMes(`0${data.getMonth() + 1}`);
+    } else {
+      setMes(data.getMonth());
+    }
+  }, []);
 
   return (
     <div className="">
@@ -166,8 +194,12 @@ export default function LayoutDashboard({
             </div>
             <div className="flex items-center justify-center gap-6">
               <div className="flex gap-3">
-                <span>17:09</span>
-                <span>30/04/2025</span>
+                <span>
+                  {horas}:{minutos}
+                </span>
+                <span>
+                  {dia}/{mes}/{ano}
+                </span>
               </div>
               <div className="flex items-center justify-center gap-3">
                 <p>Usuário</p>
