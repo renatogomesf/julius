@@ -64,15 +64,10 @@ export default function Header({
         >
           <Link href={'/'}>
             {isActive ? (
-              <Image
-                src={'/logojunta01.png'}
-                alt="logo"
-                width={80}
-                height={60}
-              />
+              <Image src={'/logopreta.png'} alt="logo" width={80} height={60} />
             ) : (
               <Image
-                src={'/logojunta02.png'}
+                src={'/logobranca.png'}
                 alt="logo"
                 width={80}
                 height={60}
