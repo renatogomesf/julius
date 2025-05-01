@@ -65,7 +65,7 @@ export default function LayoutDashboard({
             </div>
             <div>
               <p>Meta total</p>
-              <div className="w-[200px] h-[10px] rounded-[5px] bg-black/20"></div>
+              <div className="w-[150px] h-[10px] rounded-[5px] bg-black/20"></div>
             </div>
             <div className="flex items-center justify-center gap-6">
               <div className="flex gap-3 max-[790px]:hidden">
@@ -77,12 +77,12 @@ export default function LayoutDashboard({
                 </span>
               </div>
               <div className="flex items-center justify-center gap-3">
-                <p>Usuário</p>
+                <p className="max-sm:hidden">Usuário</p>
                 <div className="w-[40px] h-[40px] rounded-full bg-black/50"></div>
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center h-[calc(100%-68px)]">
+          <div className="flex items-start justify-center h-[calc(100%-68px)]">
             {children}
           </div>
         </section>
