@@ -20,7 +20,7 @@ export default function MenuMobile() {
   return (
     <Sheet>
       <SheetTrigger>
-        <AlignJustify />
+        <AlignJustify className="w-[30px] h-[30px]" />
       </SheetTrigger>
       <SheetContent className="w-fit">
         <div className="pt-12 px-5">
