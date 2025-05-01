@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-// import { useState } from 'react';
 
 import MenuMobile from '@/components/menuMobile/MenuMobile';
 import MenuWeb from '@/components/menuWeb/MenuWeb';
@@ -15,43 +14,9 @@ export default function Header({
   bg: string;
   textColor: string;
 }) {
-  // const [menuState, setMenuState] = useState(false);
-
   const pathName = usePathname();
 
   const isActive = pathName.startsWith('/login');
-
-  // const menu = () => {
-  //   if (menuState) {
-  //     const itensMenu = document.querySelector('.itens');
-  //     itensMenu?.classList.add('itensClose');
-  //     itensMenu?.classList.remove('itensOpen');
-
-  //     const menuBordas = document.querySelector('.menuBordas');
-  //     menuBordas?.classList.add('menuBordasClose');
-  //     menuBordas?.classList.remove('menuBordasOpen');
-
-  //     const menuCentro = document.querySelector('.menuCentro');
-  //     menuCentro?.classList.add('menuCentroClose');
-  //     menuCentro?.classList.remove('menuCentroOpen');
-
-  //     setMenuState(false);
-  //   } else {
-  //     const itensMenu = document.querySelector('.itens');
-  //     itensMenu?.classList.add('itensOpen');
-  //     itensMenu?.classList.remove('itensClose');
-
-  //     const menuBordas = document.querySelector('.menuBordas');
-  //     menuBordas?.classList.add('menuBordasOpen');
-  //     menuBordas?.classList.remove('menuBordasClose');
-
-  //     const menuCentro = document.querySelector('.menuCentro');
-  //     menuCentro?.classList.add('menuCentroOpen');
-  //     menuCentro?.classList.remove('menuCentroClose');
-
-  //     setMenuState(true);
-  //   }
-  // };
 
   return (
     <header
