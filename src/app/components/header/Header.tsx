@@ -3,7 +3,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+// import { useState } from 'react';
+
+import MenuMobile from '@/components/menuMobile/MenuMobile';
+import MenuWeb from '@/components/menuWeb/MenuWeb';
 
 export default function Header({
   bg,
@@ -12,43 +15,43 @@ export default function Header({
   bg: string;
   textColor: string;
 }) {
-  const [menuState, setMenuState] = useState(false);
+  // const [menuState, setMenuState] = useState(false);
 
   const pathName = usePathname();
 
   const isActive = pathName.startsWith('/login');
 
-  const menu = () => {
-    if (menuState) {
-      const itensMenu = document.querySelector('.itens');
-      itensMenu?.classList.add('itensClose');
-      itensMenu?.classList.remove('itensOpen');
+  // const menu = () => {
+  //   if (menuState) {
+  //     const itensMenu = document.querySelector('.itens');
+  //     itensMenu?.classList.add('itensClose');
+  //     itensMenu?.classList.remove('itensOpen');
 
-      const menuBordas = document.querySelector('.menuBordas');
-      menuBordas?.classList.add('menuBordasClose');
-      menuBordas?.classList.remove('menuBordasOpen');
+  //     const menuBordas = document.querySelector('.menuBordas');
+  //     menuBordas?.classList.add('menuBordasClose');
+  //     menuBordas?.classList.remove('menuBordasOpen');
 
-      const menuCentro = document.querySelector('.menuCentro');
-      menuCentro?.classList.add('menuCentroClose');
-      menuCentro?.classList.remove('menuCentroOpen');
+  //     const menuCentro = document.querySelector('.menuCentro');
+  //     menuCentro?.classList.add('menuCentroClose');
+  //     menuCentro?.classList.remove('menuCentroOpen');
 
-      setMenuState(false);
-    } else {
-      const itensMenu = document.querySelector('.itens');
-      itensMenu?.classList.add('itensOpen');
-      itensMenu?.classList.remove('itensClose');
+  //     setMenuState(false);
+  //   } else {
+  //     const itensMenu = document.querySelector('.itens');
+  //     itensMenu?.classList.add('itensOpen');
+  //     itensMenu?.classList.remove('itensClose');
 
-      const menuBordas = document.querySelector('.menuBordas');
-      menuBordas?.classList.add('menuBordasOpen');
-      menuBordas?.classList.remove('menuBordasClose');
+  //     const menuBordas = document.querySelector('.menuBordas');
+  //     menuBordas?.classList.add('menuBordasOpen');
+  //     menuBordas?.classList.remove('menuBordasClose');
 
-      const menuCentro = document.querySelector('.menuCentro');
-      menuCentro?.classList.add('menuCentroOpen');
-      menuCentro?.classList.remove('menuCentroClose');
+  //     const menuCentro = document.querySelector('.menuCentro');
+  //     menuCentro?.classList.add('menuCentroOpen');
+  //     menuCentro?.classList.remove('menuCentroClose');
 
-      setMenuState(true);
-    }
-  };
+  //     setMenuState(true);
+  //   }
+  // };
 
   return (
     <header
@@ -74,50 +77,14 @@ export default function Header({
               />
             )}
           </Link>
-
-          <div
-            className={`menuBordas sm:hidden ${
-              isActive
-                ? 'before:bg-black after:bg-black'
-                : 'before:bg-white after:bg-white'
-            }`}
-            onClick={menu}
-          >
-            <div
-              className={`menuCentro ${isActive ? 'bg-black' : 'bg-white'}`}
-            ></div>
-          </div>
         </div>
 
-        {/* max-md:hidden */}
-        <div className="itens z-9">
-          <div className="flex items-center justify-between gap-10">
-            <nav className="">
-              <ul className="flex justify-between gap-5">
-                <li>Produto</li>
-                <li>Preço</li>
-                <li>Sobre</li>
-                <li>Dúvidas</li>
-              </ul>
-            </nav>
+        <div className="max-[790px]:hidden">
+          <MenuWeb />
+        </div>
 
-            <div className="flex justify-between">
-              <div className="buttons flex gap-4">
-                <button className=" w-28 h-9 m-auto bg-[#2B59FF] text-primary rounded-[4.25px]">
-                  Cadastrar
-                </button>
-
-                <Link
-                  href={'/login'}
-                  className={`flex items-center justify-center w-28 h-9 m-auto text-primary rounded-[4.25px] ${
-                    isActive ? 'bg-[#18308a]' : 'bg-[#2B59FF]'
-                  }`}
-                >
-                  Logar
-                </Link>
-              </div>
-            </div>
-          </div>
+        <div className="flex items-center justify-center min-[790px]:hidden py-2 pr-5">
+          <MenuMobile />
         </div>
       </div>
     </header>

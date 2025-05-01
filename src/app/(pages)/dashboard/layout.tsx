@@ -32,10 +32,10 @@ export default function LayoutDashboard({
   const devendopara = pathName.endsWith('/devendopara');
   const moedas = pathName.endsWith('/moedas');
 
-  const [horas, setHoras] = useState<number>();
-  const [minutos, setMinutos] = useState<number>();
+  const [horas, setHoras] = useState<string | number>();
+  const [minutos, setMinutos] = useState<string | number>();
 
-  const [dia, setDia] = useState<number>();
+  const [dia, setDia] = useState<string | number>();
   const [mes, setMes] = useState<string | number>();
   const [ano, setAno] = useState<number>();
 
@@ -43,14 +43,28 @@ export default function LayoutDashboard({
     setInterval(() => {
       const timer = new Date();
 
-      setHoras(timer.getHours());
-      setMinutos(timer.getMinutes());
+      if (timer.getHours() < 10) {
+        setHoras(`0${timer.getHours()}`);
+      } else {
+        setHoras(timer.getHours());
+      }
+
+      if (timer.getMinutes() < 10) {
+        setMinutos(`0${timer.getMinutes()}`);
+      } else {
+        setMinutos(timer.getMinutes());
+      }
     }, 1000);
 
     const data = new Date();
 
-    setDia(data.getDate());
     setAno(data.getFullYear());
+
+    if (data.getDate() < 10) {
+      setDia(`0${data.getDate()}`);
+    } else {
+      setDia(data.getDate());
+    }
 
     if (data.getMonth() < 10) {
       setMes(`0${data.getMonth() + 1}`);
