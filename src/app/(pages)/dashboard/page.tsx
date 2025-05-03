@@ -1,26 +1,32 @@
 import { AreaChartGradient } from '@/components/areaChart/AreaChartGradient';
 
+import { Barchart } from '@/components/barChart/BarChart';
+
 export default function Overview() {
   const cardsData = [
     {
       title: 'Ganhos totais',
       value: '1212,00',
       porcentagem: '+11.01%',
+      cor: 'bg-[#236084]/30',
     },
     {
       title: 'Despesas totais',
       value: '112,00',
       porcentagem: '+11.01%',
+      cor: 'bg-[#49c7ab]/30',
     },
     {
       title: 'Me devem no total',
       value: '321,00',
       porcentagem: '+11.01%',
+      cor: 'bg-[#1190cb]/30',
     },
     {
       title: 'Eu devo no total',
       value: '12,00',
       porcentagem: '+11.01%',
+      cor: 'bg-[#7dccff]/30',
     },
   ];
 
@@ -33,7 +39,7 @@ export default function Overview() {
             return (
               <div
                 key={index}
-                className="flex-1 min-w-[250px] max-[790px]:m-auto p-6 bg-[#E6F1FD] rounded-2xl"
+                className={`flex-1 min-w-[250px] max-[790px]:m-auto p-6 ${item.cor} rounded-2xl`}
               >
                 <p className="text-[0.9rem] mb-3">{item.title}</p>
                 <div className="flex items-center justify-start gap-5">
@@ -55,7 +61,8 @@ export default function Overview() {
       </div>
 
       <div className="px-2.5 w-full mt-5">
-        <AreaChartGradient />
+        {/* <AreaChartGradient /> */}
+        <Barchart />
       </div>
     </div>
   );
