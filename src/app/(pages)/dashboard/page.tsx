@@ -1,4 +1,4 @@
-import { AreaChartGradient } from '@/components/areaChart/AreaChartGradient';
+// import { AreaChartGradient } from '@/components/areaChart/AreaChartGradient';
 
 import { Barchart } from '@/components/barChart/BarChart';
 
