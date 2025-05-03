@@ -18,12 +18,16 @@ import {
   ChartTooltipContent,
 } from '@/components/ui/chart';
 const chartData = [
-  { month: 'January', desktop: 186, mobile: 80 },
-  { month: 'February', desktop: 305, mobile: 200 },
-  { month: 'March', desktop: 237, mobile: 120 },
-  { month: 'April', desktop: 73, mobile: 190 },
-  { month: 'May', desktop: 209, mobile: 130 },
-  { month: 'June', desktop: 214, mobile: 140 },
+  { month: 'January', ganhos: 186, gastos: 80, meDevem: 100, EuDevo: 100 },
+  { month: 'February', ganhos: 305, gastos: 200, meDevem: 200, EuDevo: 500 },
+  { month: 'March', ganhos: 237, gastos: 120, meDevem: 150, EuDevo: 50 },
+  { month: 'April', ganhos: 73, gastos: 190, meDevem: 300, EuDevo: 130 },
+  { month: 'May', ganhos: 209, gastos: 130, meDevem: 500, EuDevo: 400 },
+  { month: 'June', ganhos: 214, gastos: 140, meDevem: 100, EuDevo: 300 },
+  { month: 'Julho', ganhos: 514, gastos: 340, meDevem: 600, EuDevo: 130 },
+  { month: 'Agosto', ganhos: 614, gastos: 440, meDevem: 100, EuDevo: 90 },
+  { month: 'Setembro', ganhos: 114, gastos: 140, meDevem: 300, EuDevo: 100 },
+  { month: 'Dezembro', ganhos: 14, gastos: 140, meDevem: 100, EuDevo: 100 },
 ];
 
 const chartConfig = {
@@ -69,44 +73,52 @@ export function AreaChartGradient() {
             />
             <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
             <defs>
-              <linearGradient id="fillDesktop" x1="0" y1="0" x2="0" y2="1">
-                <stop
-                  offset="5%"
-                  stopColor="var(--color-desktop)"
-                  stopOpacity={0.8}
-                />
-                <stop
-                  offset="95%"
-                  stopColor="var(--color-desktop)"
-                  stopOpacity={0.1}
-                />
+              <linearGradient id="fillGanhos" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#236084" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#236084" stopOpacity={0.1} />
               </linearGradient>
-              <linearGradient id="fillMobile" x1="0" y1="0" x2="0" y2="1">
-                <stop
-                  offset="5%"
-                  stopColor="var(--color-mobile)"
-                  stopOpacity={0.8}
-                />
-                <stop
-                  offset="95%"
-                  stopColor="var(--color-mobile)"
-                  stopOpacity={0.1}
-                />
+              <linearGradient id="fillGastos" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#49c7ab" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#49c7ab" stopOpacity={0.1} />
+              </linearGradient>
+              <linearGradient id="fillMeDevem" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#1190cb" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#1190cb" stopOpacity={0.1} />
+              </linearGradient>
+              <linearGradient id="fillEuDevo" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#7dccff" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#7dccff" stopOpacity={0.1} />
               </linearGradient>
             </defs>
             <Area
-              dataKey="mobile"
+              dataKey="ganhos"
               type="natural"
-              fill="url(#fillMobile)"
-              fillOpacity={0.4}
+              fill="url(#fillGanhos)"
+              fillOpacity={1}
               stroke="var(--color-mobile)"
               stackId="a"
             />
             <Area
-              dataKey="desktop"
+              dataKey="gastos"
               type="natural"
-              fill="url(#fillDesktop)"
-              fillOpacity={0.4}
+              fill="url(#fillGastos)"
+              fillOpacity={1}
+              stroke="var(--color-desktop)"
+              stackId="a"
+            />
+            <Area
+              dataKey="meDevem"
+              type="natural"
+              fill="url(#fillMeDevem)"
+              fillOpacity={1}
+              stroke="var(--color-mobile)"
+              stackId="a"
+            />
+            <Area
+              dataKey="EuDevo"
+              type="natural"
+              fill="url(#fillEuDevo)"
+              fillOpacity={1}
               stroke="var(--color-desktop)"
               stackId="a"
             />

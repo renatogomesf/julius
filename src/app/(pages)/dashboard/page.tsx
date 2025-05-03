@@ -25,7 +25,7 @@ export default function Overview() {
   ];
 
   return (
-    <div className="">
+    <div className="w-full">
       <div className="px-2.5">
         <h1 className="mt-8 mb-5 font-semibold">Visão geral</h1>
         <div className="flex flex-wrap items-start justify-start gap-7">
@@ -33,7 +33,7 @@ export default function Overview() {
             return (
               <div
                 key={index}
-                className="w-fit max-[790px]:w-full max-[790px]:max-w-[350px] max-[790px]:m-auto p-6 bg-[#E6F1FD] rounded-2xl"
+                className="flex-1 min-w-[250px] max-[790px]:m-auto p-6 bg-[#E6F1FD] rounded-2xl"
               >
                 <p className="text-[0.9rem] mb-3">{item.title}</p>
                 <div className="flex items-center justify-start gap-5">
