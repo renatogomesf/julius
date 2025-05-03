@@ -30,7 +30,7 @@ export const columnsMeta: ColumnDef<MetasType>[] = [
   {
     accessorKey: 'id',
     header: 'Ações',
-    cell: ({ row }) => {
+    cell: () => {
       // const meta = row.original;
 
       return (
@@ -95,7 +95,7 @@ export const columnsMeta: ColumnDef<MetasType>[] = [
     accessorKey: 'tag',
     header: 'Tag',
     cell: ({ row }) => {
-      const tag: any = row.getValue('tag');
+      const tag: string = row.getValue('tag');
       return <Badge variant="outline">{tag ? tag : ''}</Badge>;
     },
   },
@@ -106,8 +106,8 @@ export const columnsMeta: ColumnDef<MetasType>[] = [
       const valorAtual: number = row.getValue('valorAtual');
       const valorTotal: number = row.getValue('valorTotal');
 
-      const progress: any =
-        valorAtual && valorTotal ? (valorAtual / valorTotal) * 100 : '';
+      const progress: number | null =
+        valorAtual && valorTotal ? (valorAtual / valorTotal) * 100 : null;
       return (
         <div className="flex items-center gap-2">
           <span>{progress}%</span>
