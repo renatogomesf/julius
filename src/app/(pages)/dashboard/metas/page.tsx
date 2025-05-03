@@ -2,8 +2,6 @@ import { MetasType, columnsMeta } from './columnsMeta';
 
 import { DataTable } from '@/components/table/DataTable';
 
-import { Badge } from '@/components/ui/badge';
-
 async function getData(): Promise<MetasType[]> {
   // Fetch data from your API here.
   return [

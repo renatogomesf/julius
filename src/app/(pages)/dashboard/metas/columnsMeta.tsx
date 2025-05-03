@@ -22,8 +22,8 @@ export type MetasType = {
   meta: string;
   valorAtual: number;
   valorTotal: number;
-  tag: any;
-  progress?: any;
+  tag: string;
+  progress?: undefined;
 };
 
 export const columnsMeta: ColumnDef<MetasType>[] = [
