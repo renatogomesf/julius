@@ -51,7 +51,7 @@ export function Barchart() {
       <CardContent>
         <ChartContainer
           config={chartConfig}
-          className="h-[200px] w-full aspect-auto"
+          className="h-[calc(100dvh-470px)] w-full aspect-auto"
         >
           <BarChart accessibilityLayer data={chartData}>
             <CartesianGrid vertical={false} />

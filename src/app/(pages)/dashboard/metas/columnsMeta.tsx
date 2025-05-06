@@ -5,7 +5,7 @@ import { ColumnDef } from '@tanstack/react-table';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 
-import { MoreHorizontal, Pencil, Trash } from 'lucide-react';
+import { MoreHorizontal, Pencil, Trash, ArrowUpDown } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -22,7 +22,7 @@ export type MetasType = {
   meta: string;
   valorAtual: number;
   valorTotal: number;
-  tag: string;
+  category: string;
   progress?: undefined;
 };
 
@@ -63,11 +63,33 @@ export const columnsMeta: ColumnDef<MetasType>[] = [
   },
   {
     accessorKey: 'meta',
-    header: 'Meta',
+    header: ({ column }) => {
+      return (
+        <Button
+          className="cursor-pointer"
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+        >
+          Meta
+          <ArrowUpDown className="h-4 w-4" />
+        </Button>
+      );
+    },
   },
   {
     accessorKey: 'valorAtual',
-    header: 'Valor Atual',
+    header: ({ column }) => {
+      return (
+        <Button
+          className="cursor-pointer"
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+        >
+          Valor atual
+          <ArrowUpDown className="h-4 w-4" />
+        </Button>
+      );
+    },
     cell: ({ row }) => {
       const valorAtual = parseFloat(row.getValue('valorAtual'));
       const formatted = new Intl.NumberFormat('pt-BR', {
@@ -80,7 +102,18 @@ export const columnsMeta: ColumnDef<MetasType>[] = [
   },
   {
     accessorKey: 'valorTotal',
-    header: 'Valor Total',
+    header: ({ column }) => {
+      return (
+        <Button
+          className="cursor-pointer"
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+        >
+          Valor total
+          <ArrowUpDown className="h-4 w-4" />
+        </Button>
+      );
+    },
     cell: ({ row }) => {
       const valorTotal = parseFloat(row.getValue('valorTotal'));
       const formatted = new Intl.NumberFormat('pt-BR', {
@@ -92,11 +125,22 @@ export const columnsMeta: ColumnDef<MetasType>[] = [
     },
   },
   {
-    accessorKey: 'tag',
-    header: 'Tag',
+    accessorKey: 'category',
+    header: ({ column }) => {
+      return (
+        <Button
+          className="cursor-pointer"
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+        >
+          Categoria
+          <ArrowUpDown className="h-4 w-4" />
+        </Button>
+      );
+    },
     cell: ({ row }) => {
-      const tag: string = row.getValue('tag');
-      return <Badge variant="outline">{tag ? tag : ''}</Badge>;
+      const category: string = row.getValue('category');
+      return <Badge variant="outline">{category ? category : ''}</Badge>;
     },
   },
   {

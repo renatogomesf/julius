@@ -82,7 +82,7 @@ export default function LayoutDashboard({
               </div>
             </div>
           </div>
-          <div className="flex items-start justify-center h-[calc(100%-68px)]">
+          <div className="flex items-start justify-center h-[calc(100dvh-68px)] overflow-y-auto">
             {children}
           </div>
         </section>
