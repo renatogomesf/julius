@@ -72,7 +72,7 @@ export function DataTable<TData, TValue>({
   return (
     <div>
       <div className="flex items-center justify-between gap-2 max-[790px]:flex-col">
-        <div className="flex items-center py-4 w-full gap-2">
+        <div className="flex items-center py-4 w-full gap-2 max-[640px]:flex-col max-[640px]:items-start">
           <div className="flex items-center gap-2">
             <span className="text-nowrap">Filtrar por:</span>
             <Select
@@ -103,7 +103,7 @@ export function DataTable<TData, TValue>({
           />
         </div>
 
-        <div className="flex items-center justify-end space-x-2 py-4 w-full max-xl:flex-col max-xl:space-y-2 max-xl:items-end max-[790px]:flex-col max-[790px]:items-start">
+        <div className="flex items-center justify-end space-x-2 py-4 w-full max-[1280px]:flex-col max-xl:space-y-2 max-[1280px]:items-end max-[790px]:flex-col max-[790px]:items-start">
           <div className="flex items-center gap-2">
             <span className="text-nowrap">Linhas por página</span>
             <Select
@@ -223,7 +223,7 @@ export function DataTable<TData, TValue>({
         </Table>
       </div>
 
-      <div className="flex items-center justify-end space-x-2 py-4">
+      <div className="flex items-center justify-end space-x-2 py-4 max-[1280px]:flex-col max-xl:space-y-2 max-[1280px]:items-end max-[790px]:flex-col max-[790px]:items-start">
         <div className="flex items-center gap-2">
           <span>Linhas por página</span>
           <Select
@@ -245,12 +245,11 @@ export function DataTable<TData, TValue>({
           </Select>
         </div>
 
-        <div className="flex gap-2">
-          Página {table.getState().pagination.pageIndex + 1} de{' '}
-          {table.getPageCount()}
-        </div>
-
         <div className="flex items-center justify-end space-x-2">
+          <div className="flex gap-2">
+            Página {table.getState().pagination.pageIndex + 1} de{' '}
+            {table.getPageCount()}
+          </div>
           <Button
             variant="outline"
             size="sm"

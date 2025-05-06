@@ -33,7 +33,7 @@ export default function Overview() {
   return (
     <div className="w-full">
       <div className="px-2.5">
-        <h1 className="mt-8 mb-5 font-semibold">Visão geral</h1>
+        <h1 className="mt-8 mb-5 font-semibold text-4xl">Visão geral</h1>
         <div className="flex flex-wrap items-start justify-start gap-7">
           {cardsData.map((item, index) => {
             return (
