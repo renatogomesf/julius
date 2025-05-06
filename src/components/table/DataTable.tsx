@@ -39,7 +39,7 @@ import {
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -103,7 +103,7 @@ export function DataTable<TData, TValue>({
           />
         </div>
 
-        <div className="flex items-center justify-end space-x-2 py-4 w-full max-xl:flex-col max-xl:space-y-2 max-xl:items-end max-[790px]:items-start">
+        <div className="flex items-center justify-end space-x-2 py-4 w-full max-xl:flex-col max-xl:space-y-2 max-xl:items-end max-[790px]:flex-col max-[790px]:items-start">
           <div className="flex items-center gap-2">
             <span className="text-nowrap">Linhas por página</span>
             <Select
