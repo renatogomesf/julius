@@ -11,6 +11,8 @@ async function getData(): Promise<MetasType[]> {
       valorAtual: 13000,
       valorTotal: 50000,
       category: 'pessoal',
+      createdAt: '03/07/2024',
+      updatedAt: '04/08/2024',
     },
     {
       id: '728ed52f',
@@ -18,6 +20,8 @@ async function getData(): Promise<MetasType[]> {
       valorAtual: 5000,
       valorTotal: 10000,
       category: 'pessoal',
+      createdAt: '03/07/2025',
+      updatedAt: '04/08/2024',
     },
     {
       id: '728ed52f',
@@ -25,6 +29,8 @@ async function getData(): Promise<MetasType[]> {
       valorAtual: 2000,
       valorTotal: 10000,
       category: 'pessoal',
+      createdAt: '03/06/2024',
+      updatedAt: '04/09/2024',
     },
     {
       id: '728ed52f',
@@ -32,6 +38,8 @@ async function getData(): Promise<MetasType[]> {
       valorAtual: 5000,
       valorTotal: 20000,
       category: 'pessoal',
+      createdAt: '03/03/2025',
+      updatedAt: '',
     },
     {
       id: '728ed52f',
@@ -39,6 +47,8 @@ async function getData(): Promise<MetasType[]> {
       valorAtual: 5000,
       valorTotal: 100000,
       category: 'pessoal',
+      createdAt: '03/07/2024',
+      updatedAt: '',
     },
     {
       id: '728ed52f',
@@ -46,6 +56,8 @@ async function getData(): Promise<MetasType[]> {
       valorAtual: 5000,
       valorTotal: 100000,
       category: 'pessoal',
+      createdAt: '03/07/2024',
+      updatedAt: '',
     },
     {
       id: '728ed52f',
@@ -53,6 +65,8 @@ async function getData(): Promise<MetasType[]> {
       valorAtual: 5000,
       valorTotal: 100000,
       category: 'pessoal',
+      createdAt: '03/07/2024',
+      updatedAt: '',
     },
     {
       id: '728ed52f',
@@ -60,6 +74,8 @@ async function getData(): Promise<MetasType[]> {
       valorAtual: 5000,
       valorTotal: 100000,
       category: 'pessoal',
+      createdAt: '03/07/2024',
+      updatedAt: '',
     },
     {
       id: '728ed52f',
@@ -67,6 +83,8 @@ async function getData(): Promise<MetasType[]> {
       valorAtual: 5000,
       valorTotal: 100000,
       category: 'pessoal',
+      createdAt: '03/07/2024',
+      updatedAt: '',
     },
     {
       id: '728ed52f',
@@ -74,6 +92,8 @@ async function getData(): Promise<MetasType[]> {
       valorAtual: 5000,
       valorTotal: 100000,
       category: 'empresa',
+      createdAt: '03/07/2024',
+      updatedAt: '',
     },
     {
       id: '728ed52f',
@@ -81,6 +101,8 @@ async function getData(): Promise<MetasType[]> {
       valorAtual: 5000,
       valorTotal: 100000,
       category: 'pessoal',
+      createdAt: '03/07/2024',
+      updatedAt: '',
     },
     {
       id: '728ed52f',
@@ -88,6 +110,8 @@ async function getData(): Promise<MetasType[]> {
       valorAtual: 5000,
       valorTotal: 100000,
       category: 'pessoal',
+      createdAt: '03/07/2024',
+      updatedAt: '',
     },
     {
       id: '728ed52f',
@@ -95,6 +119,8 @@ async function getData(): Promise<MetasType[]> {
       valorAtual: 5000,
       valorTotal: 100000,
       category: 'empresa',
+      createdAt: '03/07/2024',
+      updatedAt: '',
     },
     {
       id: '728ed52f',
@@ -102,6 +128,8 @@ async function getData(): Promise<MetasType[]> {
       valorAtual: 5000,
       valorTotal: 100000,
       category: 'pessoal',
+      createdAt: '03/07/2024',
+      updatedAt: '',
     },
     {
       id: '728ed52f',
@@ -109,6 +137,8 @@ async function getData(): Promise<MetasType[]> {
       valorAtual: 5000,
       valorTotal: 100000,
       category: 'pessoal',
+      createdAt: '03/07/2024',
+      updatedAt: '',
     },
     {
       id: '728ed52f',
@@ -116,6 +146,8 @@ async function getData(): Promise<MetasType[]> {
       valorAtual: 5000,
       valorTotal: 100000,
       category: 'pessoal',
+      createdAt: '03/07/2024',
+      updatedAt: '',
     },
     // ...
   ];

@@ -118,6 +118,7 @@ export function DataTable<TData, TValue>({
                 />
               </SelectTrigger>
               <SelectContent side="top">
+                <SelectItem value="5">5</SelectItem>
                 <SelectItem value="10">10</SelectItem>
                 <SelectItem value="20">20</SelectItem>
                 <SelectItem value="30">30</SelectItem>
@@ -236,6 +237,7 @@ export function DataTable<TData, TValue>({
               <SelectValue placeholder={table.getState().pagination.pageSize} />
             </SelectTrigger>
             <SelectContent side="top">
+              <SelectItem value="5">5</SelectItem>
               <SelectItem value="10">10</SelectItem>
               <SelectItem value="20">20</SelectItem>
               <SelectItem value="30">30</SelectItem>

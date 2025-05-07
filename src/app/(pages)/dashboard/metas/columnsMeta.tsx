@@ -23,6 +23,8 @@ export type MetasType = {
   valorAtual: number;
   valorTotal: number;
   category: string;
+  createdAt: string;
+  updatedAt: string;
   progress?: undefined;
 };
 
@@ -141,6 +143,36 @@ export const columnsMeta: ColumnDef<MetasType>[] = [
     cell: ({ row }) => {
       const category: string = row.getValue('category');
       return <Badge variant="outline">{category ? category : ''}</Badge>;
+    },
+  },
+  {
+    accessorKey: 'createdAt',
+    header: ({ column }) => {
+      return (
+        <Button
+          className="cursor-pointer"
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+        >
+          Criado em
+          <ArrowUpDown className="h-4 w-4" />
+        </Button>
+      );
+    },
+  },
+  {
+    accessorKey: 'updatedAt',
+    header: ({ column }) => {
+      return (
+        <Button
+          className="cursor-pointer"
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+        >
+          Ultiama atualização
+          <ArrowUpDown className="h-4 w-4" />
+        </Button>
+      );
     },
   },
   {

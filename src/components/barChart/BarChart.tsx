@@ -11,37 +11,40 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
+  ChartLegend,
+  ChartLegendContent,
 } from '@/components/ui/chart';
-const chartData = [
-  { month: 'January', ganhos: 186, gastos: 80, meDevem: 100, EuDevo: 100 },
-  { month: 'February', ganhos: 305, gastos: 200, meDevem: 200, EuDevo: 500 },
-  { month: 'March', ganhos: 237, gastos: 120, meDevem: 150, EuDevo: 50 },
-  { month: 'April', ganhos: 73, gastos: 190, meDevem: 300, EuDevo: 130 },
-  { month: 'May', ganhos: 209, gastos: 130, meDevem: 500, EuDevo: 400 },
-  { month: 'June', ganhos: 214, gastos: 140, meDevem: 100, EuDevo: 300 },
-  { month: 'Julho', ganhos: 514, gastos: 340, meDevem: 600, EuDevo: 130 },
-  { month: 'Agosto', ganhos: 614, gastos: 440, meDevem: 100, EuDevo: 90 },
-  { month: 'Setembro', ganhos: 114, gastos: 140, meDevem: 300, EuDevo: 100 },
-  { month: 'Dezembro', ganhos: 14, gastos: 140, meDevem: 100, EuDevo: 100 },
-];
 
-const chartConfig = {
-  desktop: {
-    label: 'Desktop',
-    color: 'hsl(var(--chart-1))',
-  },
-  mobile: {
-    label: 'Mobile',
-    color: 'hsl(var(--chart-2))',
-  },
-} satisfies ChartConfig;
+// const chartConfig = {
+//   ganhos: {
+//     label: 'Ganhos',
+//   },
+//   despesas: {
+//     label: 'Despesas',
+//   },
+//   meDevem: {
+//     label: 'Me devem',
+//   },
+//   EuDevo: {
+//     label: 'Eu devo',
+//   },
+// } satisfies ChartConfig;
 
-export function Barchart() {
+export function Barchart({
+  chartData,
+  chartConfig,
+}: {
+  chartData: object[];
+  chartConfig: ChartConfig;
+}) {
+  chartConfig satisfies ChartConfig;
+
   return (
     <Card>
       <CardHeader>
@@ -66,8 +69,9 @@ export function Barchart() {
               cursor={false}
               content={<ChartTooltipContent indicator="dashed" />}
             />
+            <ChartLegend content={<ChartLegendContent />} />
             <Bar dataKey="ganhos" fill="#236084" radius={4} />
-            <Bar dataKey="gastos" fill="#49c7ab" radius={4} />
+            <Bar dataKey="despesas" fill="#49c7ab" radius={4} />
             <Bar dataKey="meDevem" fill="#1190cb" radius={4} />
             <Bar dataKey="EuDevo" fill="#7dccff" radius={4} />
           </BarChart>
