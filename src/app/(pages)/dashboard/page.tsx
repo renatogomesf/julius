@@ -1,6 +1,25 @@
-// import { AreaChartGradient } from '@/components/areaChart/AreaChartGradient';
+'use client';
 
-import { Barchart } from '@/components/barChart/BarChart';
+import { TrendingUp } from 'lucide-react';
+import { Bar, BarChart, CartesianGrid, XAxis } from 'recharts';
+
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+
+import {
+  ChartConfig,
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+  ChartLegend,
+  ChartLegendContent,
+} from '@/components/ui/chart';
 
 export default function Overview() {
   const cardsData = [
@@ -68,12 +87,12 @@ export default function Overview() {
     EuDevo: {
       label: 'Eu devo',
     },
-  };
+  } satisfies ChartConfig;
 
   return (
     <div className="w-full">
       <div className="px-2.5">
-        <h1 className="mt-8 mb-5 font-semibold text-4xl">Visão geral</h1>
+        <h1 className="mt-8 mb-5 font-semibold text-4xl">Visão Geral</h1>
         <div className="flex flex-wrap items-start justify-start gap-7">
           {cardsData.map((item, index) => {
             return (
@@ -101,8 +120,39 @@ export default function Overview() {
       </div>
 
       <div className="px-2.5 w-full mt-5">
-        {/* <AreaChartGradient /> */}
-        <Barchart chartData={chartData} chartConfig={chartConfig} />
+        <Card>
+          <CardHeader>
+            <CardTitle>Gráfico - Visão Geral</CardTitle>
+            {/* <CardDescription>January - June 2024</CardDescription> */}
+          </CardHeader>
+          <CardContent>
+            <ChartContainer
+              config={chartConfig}
+              className="h-[calc(100dvh-420px)] w-full aspect-auto"
+            >
+              <BarChart accessibilityLayer data={chartData}>
+                <CartesianGrid vertical={false} />
+                <XAxis
+                  dataKey="month"
+                  tickLine={false}
+                  tickMargin={10}
+                  axisLine={false}
+                  tickFormatter={(value) => value.slice(0, 3)}
+                />
+                <ChartTooltip
+                  cursor={false}
+                  content={<ChartTooltipContent indicator="dashed" />}
+                />
+                <ChartLegend content={<ChartLegendContent />} />
+                <Bar dataKey="ganhos" fill="#236084" radius={4} />
+                <Bar dataKey="despesas" fill="#49c7ab" radius={4} />
+                <Bar dataKey="meDevem" fill="#1190cb" radius={4} />
+                <Bar dataKey="EuDevo" fill="#7dccff" radius={4} />
+              </BarChart>
+            </ChartContainer>
+          </CardContent>
+          <CardFooter className="flex-col items-start gap-2 text-sm"></CardFooter>
+        </Card>
       </div>
     </div>
   );

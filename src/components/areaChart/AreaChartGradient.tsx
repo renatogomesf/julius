@@ -14,34 +14,21 @@ import {
 import {
   ChartConfig,
   ChartContainer,
+  ChartLegend,
+  ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
 } from '@/components/ui/chart';
-const chartData = [
-  { month: 'January', ganhos: 186, gastos: 80, meDevem: 100, EuDevo: 100 },
-  { month: 'February', ganhos: 305, gastos: 200, meDevem: 200, EuDevo: 500 },
-  { month: 'March', ganhos: 237, gastos: 120, meDevem: 150, EuDevo: 50 },
-  { month: 'April', ganhos: 73, gastos: 190, meDevem: 300, EuDevo: 130 },
-  { month: 'May', ganhos: 209, gastos: 130, meDevem: 500, EuDevo: 400 },
-  { month: 'June', ganhos: 214, gastos: 140, meDevem: 100, EuDevo: 300 },
-  { month: 'Julho', ganhos: 514, gastos: 340, meDevem: 600, EuDevo: 130 },
-  { month: 'Agosto', ganhos: 614, gastos: 440, meDevem: 100, EuDevo: 90 },
-  { month: 'Setembro', ganhos: 114, gastos: 140, meDevem: 300, EuDevo: 100 },
-  { month: 'Dezembro', ganhos: 14, gastos: 140, meDevem: 100, EuDevo: 100 },
-];
 
-const chartConfig = {
-  desktop: {
-    label: 'Desktop',
-    color: 'hsl(var(--chart-1))',
-  },
-  mobile: {
-    label: 'Mobile',
-    color: 'hsl(var(--chart-2))',
-  },
-} satisfies ChartConfig;
+export function AreaChartGradient({
+  chartData,
+  chartConfig,
+}: {
+  chartData: object[];
+  chartConfig: ChartConfig;
+}) {
+  chartConfig satisfies ChartConfig;
 
-export function AreaChartGradient() {
   return (
     <Card>
       <CardHeader>
@@ -77,7 +64,7 @@ export function AreaChartGradient() {
                 <stop offset="5%" stopColor="#236084" stopOpacity={0.8} />
                 <stop offset="95%" stopColor="#236084" stopOpacity={0.1} />
               </linearGradient>
-              <linearGradient id="fillGastos" x1="0" y1="0" x2="0" y2="1">
+              <linearGradient id="fillDespesas" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="5%" stopColor="#49c7ab" stopOpacity={0.8} />
                 <stop offset="95%" stopColor="#49c7ab" stopOpacity={0.1} />
               </linearGradient>
@@ -99,9 +86,9 @@ export function AreaChartGradient() {
               stackId="a"
             />
             <Area
-              dataKey="gastos"
+              dataKey="despesas"
               type="natural"
-              fill="url(#fillGastos)"
+              fill="url(#fillDespesas)"
               fillOpacity={1}
               stroke="var(--color-desktop)"
               stackId="a"
@@ -122,6 +109,7 @@ export function AreaChartGradient() {
               stroke="var(--color-desktop)"
               stackId="a"
             />
+            <ChartLegend content={<ChartLegendContent />} />
           </AreaChart>
         </ChartContainer>
       </CardContent>
