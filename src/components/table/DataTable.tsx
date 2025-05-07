@@ -44,15 +44,18 @@ import { useState } from 'react';
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
+  filterTable: string;
+  title: string
 }
 
 export function DataTable<TData, TValue>({
   columns,
   data,
+  filterTable,
+  title
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
-  const [filter, setFilter] = useState('meta');
 
   const table = useReactTable({
     data,
@@ -73,31 +76,13 @@ export function DataTable<TData, TValue>({
     <div>
       <div className="flex items-center justify-between gap-2 max-[790px]:flex-col">
         <div className="flex items-center py-4 w-full gap-2 max-[640px]:flex-col max-[640px]:items-start">
-          <div className="flex items-center gap-2">
-            <span className="text-nowrap">Filtrar por:</span>
-            <Select
-              value={`${filter}`}
-              onValueChange={(value) => {
-                setFilter(value);
-              }}
-            >
-              <SelectTrigger className="w-fit cursor-pointer">
-                <SelectValue placeholder={filter} />
-              </SelectTrigger>
-              <SelectContent side="bottom">
-                <SelectItem value="meta">Meta</SelectItem>
-                <SelectItem value="category">Categoria</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-
           <Input
-            placeholder="Filtrar tabela"
+            placeholder={`Filtrar por ${title}`}
             value={
-              (table.getColumn(`${filter}`)?.getFilterValue() as string) ?? ''
+              (table.getColumn(`${filterTable}`)?.getFilterValue() as string) ?? ''
             }
             onChange={(event) => {
-              table.getColumn(`${filter}`)?.setFilterValue(event.target.value);
+              table.getColumn(`${filterTable}`)?.setFilterValue(event.target.value);
             }}
             className="max-w-sm"
           />
