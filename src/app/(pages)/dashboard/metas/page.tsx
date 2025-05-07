@@ -159,7 +159,7 @@ export default async function Metas() {
   return (
     <div className="w-full px-2.5">
       <h1 className="mt-8 mb-5 font-semibold text-4xl">Metas</h1>
-      <div className="container mx-auto">
+      <div className="w-full">
         <DataTable
           columns={columnsMeta}
           data={data}
