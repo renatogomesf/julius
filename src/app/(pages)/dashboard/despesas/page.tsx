@@ -329,17 +329,18 @@ export default function Despesas() {
             title={'Gráfico - Despesas'}
           />
         </div>
-      </div>
+        <div>
+          <h1 className="mt-10 mb-2 font-semibold text-2xl">
+            Tabela - Despesas
+          </h1>
 
-      <div>
-        <h1 className="mt-10 mb-2 font-semibold text-2xl">Tabela - Despesas</h1>
-
-        <DataTable
-          columns={columnsDespesas}
-          data={chartData}
-          filterTable={'name'}
-          title="nome"
-        />
+          <DataTable
+            columns={columnsDespesas}
+            data={chartData}
+            filterTable={'name'}
+            title="nome"
+          />
+        </div>
       </div>
     </div>
   );
