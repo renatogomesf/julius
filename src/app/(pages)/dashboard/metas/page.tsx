@@ -157,7 +157,7 @@ export default async function Metas() {
   const data = await getData();
 
   return (
-    <div className="w-full px-2.5">
+    <div className="w-full px-2.5 bg-[#f3f3f3]">
       <h1 className="mt-8 mb-5 font-semibold text-4xl">Metas</h1>
       <div className="w-full">
         <DataTable

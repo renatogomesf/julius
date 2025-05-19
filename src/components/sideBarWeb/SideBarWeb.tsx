@@ -26,25 +26,25 @@ export default function SideBarWeb() {
   const moedas = pathName.endsWith('/moedas');
 
   return (
-    <div>
+    <div className="bg-[#2A2A2A] text-white">
       <section className="flex flex-col justify-between w-53 border-r-1 border-black/10 h-screen p-4">
         <nav className="flex flex-col gap-5">
           <Image
             className="mb-5 mt-2 m-auto"
-            src={'/logopreta.png'}
+            src={'/logobranca.png'}
             alt="logo"
             width={80}
             height={60}
           />
 
           <div>
-            <p className="text-[0.9rem] text-black/50">Dashboard</p>
+            <p className="text-[0.9rem] text-white/50">Dashboard</p>
             <ul>
               <li>
                 <Link
                   href={'/dashboard'}
-                  className={`text-[0.9rem] flex items-center justify-start gap-2 mt-3 hover:bg-black/5 rounded-[12px] pl-6 p-2 ${
-                    overview ? 'bg-black/5' : ''
+                  className={`text-[0.9rem] flex items-center justify-start gap-2 mt-3 hover:bg-white/5 rounded-[12px] pl-6 p-2 ${
+                    overview ? 'bg-white/5' : ''
                   }`}
                 >
                   <LuTelescope className="w-[20px] h-[20px]" />
@@ -55,8 +55,8 @@ export default function SideBarWeb() {
               <li>
                 <Link
                   href={'/dashboard/metas'}
-                  className={`text-[0.9rem] flex items-center justify-start gap-2 mt-3 hover:bg-black/5 rounded-[12px] pl-6 p-2 ${
-                    metas ? 'bg-black/5' : ''
+                  className={`text-[0.9rem] flex items-center justify-start gap-2 mt-3 hover:bg-white/5 rounded-[12px] pl-6 p-2 ${
+                    metas ? 'bg-white/5' : ''
                   }`}
                 >
                   <LuGoal className="w-[20px] h-[20px]" />
@@ -67,13 +67,13 @@ export default function SideBarWeb() {
           </div>
 
           <div>
-            <p className="text-[0.9rem] text-black/50">Pessoal</p>
+            <p className="text-[0.9rem] text-white/50">Pessoal</p>
             <ul className="">
               <li>
                 <Link
                   href={'/dashboard/ganhos'}
-                  className={`text-[0.9rem] flex items-center justify-start gap-2 mt-3 hover:bg-black/5 rounded-[12px] pl-6 p-2 ${
-                    ganhos ? 'bg-black/5' : ''
+                  className={`text-[0.9rem] flex items-center justify-start gap-2 mt-3 hover:bg-white/5 rounded-[12px] pl-6 p-2 ${
+                    ganhos ? 'bg-white/5' : ''
                   }`}
                 >
                   <LuTrendingUp className="w-[20px] h-[20px] " />
@@ -83,8 +83,8 @@ export default function SideBarWeb() {
               <li>
                 <Link
                   href={'/dashboard/despesas'}
-                  className={`text-[0.9rem] flex items-center justify-start gap-2 mt-3 hover:bg-black/5 rounded-[12px] pl-6 p-2 ${
-                    despesas ? 'bg-black/5' : ''
+                  className={`text-[0.9rem] flex items-center justify-start gap-2 mt-3 hover:bg-white/5 rounded-[12px] pl-6 p-2 ${
+                    despesas ? 'bg-white/5' : ''
                   }`}
                 >
                   <LuTrendingDown className="w-[20px] h-[20px] " />
@@ -95,41 +95,41 @@ export default function SideBarWeb() {
           </div>
 
           <div>
-            <p className="text-[0.9rem] text-black/50">Interpessoal</p>
+            <p className="text-[0.9rem] text-white/50">Interpessoal</p>
             <ul className="">
               <li>
                 <Link
                   href={'/dashboard/medevendo'}
-                  className={`text-[0.9rem] flex items-center justify-start gap-2 mt-3 hover:bg-black/5 rounded-[12px] pl-6 p-2 ${
-                    medevendo ? 'bg-black/5' : ''
+                  className={`text-[0.9rem] flex items-center justify-start gap-2 mt-3 hover:bg-white/5 rounded-[12px] pl-6 p-2 ${
+                    medevendo ? 'bg-white/5' : ''
                   } `}
                 >
                   <LuSquareArrowUp className="w-[20px] h-[20px] " />
-                  Me devem
+                  Devedores
                 </Link>
               </li>
               <li>
                 <Link
                   href={'/dashboard/devendopara'}
-                  className={`text-[0.9rem] flex items-center justify-start gap-2 mt-3 hover:bg-black/5 rounded-[12px] pl-6 p-2 ${
-                    devendopara ? 'bg-black/5' : ''
+                  className={`text-[0.9rem] flex items-center justify-start gap-2 mt-3 hover:bg-white/5 rounded-[12px] pl-6 p-2 ${
+                    devendopara ? 'bg-white/5' : ''
                   } `}
                 >
                   <LuSquareArrowDown className="w-[20px] h-[20px] " />
-                  Devendo
+                  Dívidas
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <p className="text-[0.9rem] text-black/50">Cotação de Moedas</p>
+            <p className="text-[0.9rem] text-white/50">Cotação de Moedas</p>
             <ul className="">
               <li>
                 <Link
                   href={'/dashboard/moedas'}
-                  className={`text-[0.9rem] flex items-center justify-start gap-2 mt-3 hover:bg-black/5 rounded-[12px] pl-6 p-2 ${
-                    moedas ? 'bg-black/5' : ''
+                  className={`text-[0.9rem] flex items-center justify-start gap-2 mt-3 hover:bg-white/5 rounded-[12px] pl-6 p-2 ${
+                    moedas ? 'bg-white/5' : ''
                   } `}
                 >
                   <LuCoins className="w-[20px] h-[20px] " />
@@ -143,7 +143,7 @@ export default function SideBarWeb() {
         <div>
           <Link
             href={''}
-            className="text-[0.9rem] flex items-center justify-start gap-2 mt-3 hover:bg-black/5 rounded-[12px] p-2"
+            className="text-[0.9rem] flex items-center justify-start gap-2 mt-3 hover:bg-white/5 rounded-[12px] p-2"
           >
             <LuBolt className="w-[20px] h-[20px] " />
             Configurações

@@ -128,7 +128,7 @@ export default function SideBarMobile() {
                       } `}
                     >
                       <LuSquareArrowUp className="w-[20px] h-[20px] " />
-                      Me devem
+                      Devedores
                     </Link>
                   </SheetClose>
                 </li>
@@ -141,7 +141,7 @@ export default function SideBarMobile() {
                       } `}
                     >
                       <LuSquareArrowDown className="w-[20px] h-[20px] " />
-                      Devendo
+                      Dívidas
                     </Link>
                   </SheetClose>
                 </li>

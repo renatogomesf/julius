@@ -45,14 +45,14 @@ interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
   filterTable: string;
-  title: string
+  title: string;
 }
 
 export function DataTable<TData, TValue>({
   columns,
   data,
   filterTable,
-  title
+  title,
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
@@ -73,16 +73,19 @@ export function DataTable<TData, TValue>({
   });
 
   return (
-    <div>
+    <div className="bg-white p-2 rounded-[12px]">
       <div className="flex items-center justify-between gap-2 max-[790px]:flex-col">
         <div className="flex items-center py-4 w-full gap-2 max-[640px]:flex-col max-[640px]:items-start">
           <Input
             placeholder={`Filtrar por ${title}`}
             value={
-              (table.getColumn(`${filterTable}`)?.getFilterValue() as string) ?? ''
+              (table.getColumn(`${filterTable}`)?.getFilterValue() as string) ??
+              ''
             }
             onChange={(event) => {
-              table.getColumn(`${filterTable}`)?.setFilterValue(event.target.value);
+              table
+                .getColumn(`${filterTable}`)
+                ?.setFilterValue(event.target.value);
             }}
             className="max-w-sm"
           />

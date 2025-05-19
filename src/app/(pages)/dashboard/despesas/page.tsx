@@ -319,7 +319,7 @@ export default function Despesas() {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-[#f3f3f3]">
       <div className="px-2.5">
         <h1 className="mt-8 mb-5 font-semibold text-4xl">Despesas</h1>
         <div className="w-full mt-5">

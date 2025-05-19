@@ -319,7 +319,7 @@ export default function Ganhos() {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-[#f3f3f3]">
       <div className="px-2.5">
         <h1 className="mt-8 mb-5 font-semibold text-4xl">Ganhos</h1>
         <div className="w-full mt-5">
@@ -337,7 +337,7 @@ export default function Ganhos() {
             columns={columnsGanhos}
             data={chartData}
             filterTable={'name'}
-            title='nome'
+            title="nome"
           />
         </div>
       </div>
