@@ -1,14 +1,6 @@
 'use client';
 
-import {
-  Bar,
-  BarChart,
-  CartesianGrid,
-  XAxis,
-  Pie,
-  PieChart,
-  Tooltip,
-} from 'recharts';
+import { Bar, BarChart, CartesianGrid, XAxis, Pie, PieChart } from 'recharts';
 
 import {
   Card,
